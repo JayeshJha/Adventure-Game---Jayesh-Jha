@@ -8,6 +8,7 @@ public class PlayerMovement : MonoBehaviour
     private float playerSpeed = 2.0f;
     private float jumpHeight = 1.0f;
     private float gravityValue = -9.81f;
+    public Animator Anim;
 
     private void Start()
     {
@@ -43,5 +44,5 @@ public class PlayerMovement : MonoBehaviour
         // Combine horizontal and vertical movement
         Vector3 finalMove = (move * playerSpeed) + (playerVelocity.y * Vector3.up);
         controller.Move(finalMove * Time.deltaTime);
-    }
+        Anim.SetFloat("speed",finalMove.magnitude);    }
 }

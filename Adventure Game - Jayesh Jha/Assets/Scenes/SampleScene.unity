@@ -1019,6 +1019,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1908032316}
     m_Modifications:
+    - target: {fileID: 7269189869014186013, guid: df4b716990baa80499a4641dbb1c1258, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: ba6b770bcf1704b12be7bc67d7ed6346, type: 2}
     - target: {fileID: 7269189869021403031, guid: df4b716990baa80499a4641dbb1c1258, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -1261,6 +1265,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 95028430175513588, guid: 0814aba0a5f87494cb000251ab82361f, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 8c9d4d96bda3f495b9b85d46c671ffa9, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -5787,6 +5795,11 @@ MonoBehaviour:
   m_MinRegionArea: 2
   m_NavMeshData: {fileID: 23800000, guid: 1f444efa73a2246eb88bbc48a1e69ee5, type: 2}
   m_BuildHeightMesh: 0
+--- !u!95 &1251155363 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 7269189869014186013, guid: df4b716990baa80499a4641dbb1c1258, type: 3}
+  m_PrefabInstance: {fileID: 167211286}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1361458917
 GameObject:
   m_ObjectHideFlags: 0
@@ -5845,6 +5858,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d9bf1078ef25425ca2986a42156895e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Anim: {fileID: 1728514724}
 --- !u!136 &1361458920
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -7175,6 +7189,11 @@ MonoBehaviour:
   m_MinRegionArea: 2
   m_NavMeshData: {fileID: 0}
   m_BuildHeightMesh: 0
+--- !u!95 &1728514724 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 95028430175513588, guid: 0814aba0a5f87494cb000251ab82361f, type: 3}
+  m_PrefabInstance: {fileID: 210186207}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1770141004
 GameObject:
   m_ObjectHideFlags: 0
@@ -7748,7 +7767,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9ecfd19d69b8841138d2cc7075484ab1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Anim: {fileID: 0}
+  Anim: {fileID: 1251155363}
 --- !u!136 &1908032315
 CapsuleCollider:
   m_ObjectHideFlags: 0
