@@ -401,6 +401,10 @@
 "Assets/Collection.cs"
 "Assets/EnemyAttack.cs"
 "Assets/PlayerMovement.cs"
+"Assets/Scripts/faceMovingDirection.cs"
+"Assets/Scripts/playerMovement.cs"
+"Assets/Scripts/removeYZRotation.cs"
+"Assets/Scripts/ThirdPersonCamera.cs"
 "Assets/SimpleCollectiblesPack/SimpleCollectibleScript.cs"
 "Assets/TutorialInfo/Scripts/Readme.cs"
 -langversion:9.0

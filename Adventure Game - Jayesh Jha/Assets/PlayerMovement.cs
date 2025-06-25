@@ -36,6 +36,7 @@ public class PlayerMovement : MonoBehaviour
         if (Input.GetButtonDown("Jump") && groundedPlayer)
         {
             playerVelocity.y = Mathf.Sqrt(jumpHeight * -2.0f * gravityValue);
+            Anim.SetTrigger("jump");
         }
 
         // Apply gravity
