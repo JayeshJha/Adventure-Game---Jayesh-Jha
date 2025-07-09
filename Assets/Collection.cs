@@ -5,17 +5,22 @@ using TMPro;
 public class Collection : MonoBehaviour
 {   public int TotalCollection;
 public TMP_Text CoinText;
+public float ctime;
+public TMP_Text TimerText;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
   
   {
-        
+        TimerText.text="00:00";
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        ctime += Time.deltaTime;
+        int minute = (int)ctime/60;
+        int second = (int)ctime%60;
+        TimerText.text=minute.ToString()+":"+second.ToString();
     }
     void OnCollisionEnter (Collision Craft){
         Debug.Log("Hello");
@@ -30,6 +35,7 @@ SceneManager.LoadScene ("Level2");}
 if(TotalCollection>=5 && SceneManager.GetActiveScene().name=="Level2"){
 SceneManager.LoadScene ("Win");    
 }
+
 
     }
 }
