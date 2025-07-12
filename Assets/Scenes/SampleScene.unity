@@ -1194,7 +1194,7 @@ MonoBehaviour:
   Projectile: {fileID: 8036144316578480683, guid: fa0e81038f3704c15ad2373b44df6f85, type: 3}
   Barrel: {fileID: 252476455}
   ShootingFrequency: 0.5
-  BulletSpeed: 100
+  BulletSpeed: 50
 --- !u!1 &252476454
 GameObject:
   m_ObjectHideFlags: 0
@@ -8512,6 +8512,23 @@ MonoBehaviour:
   m_MinRegionArea: 2
   m_NavMeshData: {fileID: 0}
   m_BuildHeightMesh: 0
+--- !u!1 &2011960803 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4573093210635914622, guid: 6db9b0ae862c64af4a0b120ec70f9628, type: 3}
+  m_PrefabInstance: {fileID: 4844106947820966325}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2011960804
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2011960803}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ae0cea8ef8ff646d0b4686ca12574279, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2044108109
 GameObject:
   m_ObjectHideFlags: 0
@@ -9633,7 +9650,10 @@ PrefabInstance:
     - {fileID: 5179601126354262404, guid: 6db9b0ae862c64af4a0b120ec70f9628, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 4573093210635914622, guid: 6db9b0ae862c64af4a0b120ec70f9628, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2011960804}
   m_SourcePrefab: {fileID: 100100000, guid: 6db9b0ae862c64af4a0b120ec70f9628, type: 3}
 --- !u!1001 &9128301852600725387
 PrefabInstance:

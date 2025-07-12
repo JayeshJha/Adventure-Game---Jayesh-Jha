@@ -2673,7 +2673,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 492274462}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5d8eb50b075bb4f12830dfa0cfaafc3f, type: 3}
   m_Name: 
@@ -2988,7 +2988,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 172747713172614353, guid: c87e6905e3dd24003bc85cc642339a8f, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 190
+      value: 165.4
       objectReference: {fileID: 0}
     - target: {fileID: 172747713172614353, guid: c87e6905e3dd24003bc85cc642339a8f, type: 3}
       propertyPath: m_LocalRotation.w
@@ -3036,7 +3036,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1755231264014167798, guid: c87e6905e3dd24003bc85cc642339a8f, type: 3}
       propertyPath: runSpeed
-      value: 11
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 1755231264014167798, guid: c87e6905e3dd24003bc85cc642339a8f, type: 3}
       propertyPath: jumpSpeed
@@ -3426,7 +3426,7 @@ Transform:
   m_GameObject: {fileID: 1924662694}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: -8.78, z: 0}
   m_LocalScale: {x: 20, y: 20, z: 20}
   m_ConstrainProportionsScale: 0
   m_Children: []
