@@ -21,7 +21,7 @@ public class shooting : MonoBehaviour
             if(Input.GetMouseButton(0)){
             Anim.SetTrigger("shoot");
             ctime=0;
-            GameObject Clone=Instantiate(Projectile,Barrel.position,Quaternion.Euler(transform.TransformDirection(Barrel.forward)));
+            GameObject Clone=Instantiate(Projectile,Barrel.position,Barrel.rotation);
             Clone.GetComponent<Rigidbody>().AddForce(Barrel.forward*BulletSpeed,ForceMode.Impulse);
 
         }

@@ -15,6 +15,7 @@ public class EnemyHealth : MonoBehaviour
     }
      void OnCollisionEnter (Collision Craft){
         if (Craft.gameObject.tag=="Projectile"){
+            GameObject.Find("Player").GetComponent<Collection>().KillCount++;
             Destroy(Craft.gameObject);
         }
 

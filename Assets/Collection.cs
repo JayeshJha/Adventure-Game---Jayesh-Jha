@@ -10,6 +10,7 @@ public class Collection: MonoBehaviour {
   public TMP_Text CoinText;
   public float ctime;
   public TMP_Text TimerText;
+  public int KillCount;
   // Start is called once before the first execution of Update after the MonoBehaviour is created
   void Start()
 
@@ -20,7 +21,9 @@ public class Collection: MonoBehaviour {
         CreateAccount = true
     };
     PlayFabClientAPI.LoginWithCustomID(request, OnSuccess, OnFailure);
+    
   }
+
   void OnSuccess(LoginResult Result) {
     Debug.Log("Login Worked");
   }
@@ -69,223 +72,45 @@ public class Collection: MonoBehaviour {
     if (SceneManager.GetActiveScene().name == "Level2") {
       TitleHighScore = "HighScoreLvl2";
     }
-PlayFabClientAPI.GetPlayerStatistics(new GetPlayerStatisticsRequest(),
-            result => {
-                foreach (var stat in result.Statistics)
-                {
-                    if (stat.StatisticName == TitleHighScore)
-                    {
-                      int HighScore=stat.Value; 
-                      if((int) ctime < HighScore){
-                        var request2 = new UpdatePlayerStatisticsRequest {
-      Statistics = new List < StatisticUpdate > {
-        new StatisticUpdate {
-          StatisticName = TitleHighScore,
-          Value = (int) ctime
-        }
-      }
-    };
-    PlayFabClientAPI.UpdatePlayerStatistics(request2,
-      result => Debug.Log("Score submitted!"),
-      error => Debug.LogError("Failed to submit score: " + error.GenerateErrorReport()));
-
-                      }              
-                    }
+    PlayFabClientAPI.GetPlayerStatistics(new GetPlayerStatisticsRequest(),
+      result => {
+        foreach(var stat in result.Statistics) {
+          if (stat.StatisticName == TitleHighScore) {
+            int HighScore = stat.Value;
+            if ((int) ctime < HighScore) {
+              var request2 = new UpdatePlayerStatisticsRequest {
+                Statistics = new List < StatisticUpdate > {
+                  new StatisticUpdate {
+                    StatisticName = TitleHighScore,
+                      Value = (int) ctime
+                  }
                 }
+              };
+              var request3 = new UpdatePlayerStatisticsRequest {
+                Statistics = new List < StatisticUpdate > {
+                  new StatisticUpdate {
+                    StatisticName = "EnemiesKilled",
+                      Value = KillCount
+                  }
+                }};
+
+                PlayFabClientAPI.UpdatePlayerStatistics(request2,
+                  result => Debug.Log("Score submitted!"),
+                  error => Debug.LogError("Failed to submit score: " + error.GenerateErrorReport()));
+                PlayFabClientAPI.UpdatePlayerStatistics(request3,
+                  result => Debug.Log("Score submitted!"),
+                  error => Debug.LogError("Failed to submit score: " + error.GenerateErrorReport()));
+              };
             }
-            
-          ,
-          error=>
-          {
-            Debug.LogError(error.GenerateErrorReport());
           }
+      }
+      
+
+      ,
+      error => {
+        Debug.LogError(error.GenerateErrorReport());
+      }
 );
-    
+
   }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
