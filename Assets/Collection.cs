@@ -2,9 +2,9 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using TMPro;
-using PlayFab.ClientModels;
+//using PlayFab.ClientModels;
 using System.Collections.Generic;
-using PlayFab;
+//using PlayFab;
 public class Collection: MonoBehaviour {
   public int TotalCollection;
   public TMP_Text CoinText;
@@ -16,20 +16,21 @@ public class Collection: MonoBehaviour {
 
   {
     TimerText.text = "00:00";
-    var request = new LoginWithCustomIDRequest {
+   /* var request = new LoginWithCustomIDRequest {
       CustomId = SystemInfo.deviceUniqueIdentifier,
         CreateAccount = true
     };
-    PlayFabClientAPI.LoginWithCustomID(request, OnSuccess, OnFailure);
+    PlayFabClientAPI.LoginWithCustomID(request, OnSuccess, OnFailure);*/
     
   }
 
-  void OnSuccess(LoginResult Result) {
+ /* void OnSuccess(LoginResult Result) {
     Debug.Log("Login Worked");
   }
   void OnFailure(PlayFabError Result) {
     Debug.LogError("PlayFab login failed: " + Result.GenerateErrorReport());
   }
+ */
   // Update is called once per frame
   void Update() {
     ctime += Time.deltaTime;
@@ -72,45 +73,49 @@ public class Collection: MonoBehaviour {
     if (SceneManager.GetActiveScene().name == "Level2") {
       TitleHighScore = "HighScoreLvl2";
     }
-    PlayFabClientAPI.GetPlayerStatistics(new GetPlayerStatisticsRequest(),
-      result => {
-        foreach(var stat in result.Statistics) {
-          if (stat.StatisticName == TitleHighScore) {
-            int HighScore = stat.Value;
-            if ((int) ctime < HighScore) {
-              var request2 = new UpdatePlayerStatisticsRequest {
-                Statistics = new List < StatisticUpdate > {
-                  new StatisticUpdate {
-                    StatisticName = TitleHighScore,
-                      Value = (int) ctime
+        /*
+          PlayFabClientAPI.GetPlayerStatistics(new GetPlayerStatisticsRequest(),
+            result => {
+              foreach(var stat in result.Statistics) {
+                if (stat.StatisticName == TitleHighScore) {
+                  int HighScore = stat.Value;
+                  if ((int) ctime < HighScore) {
+
+                    var request2 = new UpdatePlayerStatisticsRequest {
+                      Statistics = new List < StatisticUpdate > {
+                        new StatisticUpdate {
+                          StatisticName = TitleHighScore,
+                            Value = (int) ctime
+                        }
+                      }
+                    };
+                    var request3 = new UpdatePlayerStatisticsRequest {
+                      Statistics = new List < StatisticUpdate > {
+                        new StatisticUpdate {
+                          StatisticName = "EnemiesKilled",
+                            Value = KillCount
+                        }
+                      }};
+
+                      PlayFabClientAPI.UpdatePlayerStatistics(request2,
+                        result => Debug.Log("Score submitted!"),
+                        error => Debug.LogError("Failed to submit score: " + error.GenerateErrorReport()));
+                      PlayFabClientAPI.UpdatePlayerStatistics(request3,
+                        result => Debug.Log("Score submitted!"),
+                        error => Debug.LogError("Failed to submit score: " + error.GenerateErrorReport()));
+
+
+                    };
                   }
                 }
-              };
-              var request3 = new UpdatePlayerStatisticsRequest {
-                Statistics = new List < StatisticUpdate > {
-                  new StatisticUpdate {
-                    StatisticName = "EnemiesKilled",
-                      Value = KillCount
-                  }
-                }};
-
-                PlayFabClientAPI.UpdatePlayerStatistics(request2,
-                  result => Debug.Log("Score submitted!"),
-                  error => Debug.LogError("Failed to submit score: " + error.GenerateErrorReport()));
-                PlayFabClientAPI.UpdatePlayerStatistics(request3,
-                  result => Debug.Log("Score submitted!"),
-                  error => Debug.LogError("Failed to submit score: " + error.GenerateErrorReport()));
-              };
             }
-          }
-      }
-      
 
-      ,
-      error => {
-        Debug.LogError(error.GenerateErrorReport());
-      }
-);
 
-  }
+            ,
+            error => {
+              Debug.LogError(error.GenerateErrorReport());
+            }
+      );*/
+
+    }
 }

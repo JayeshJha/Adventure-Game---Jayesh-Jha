@@ -1,9 +1,10 @@
 using UnityEngine;
-using PlayFab;
-using PlayFab.ClientModels;
+//using PlayFab;
+//using PlayFab.ClientModels;
 using System.Collections.Generic;
 public class PlayFabTest : MonoBehaviour
 {
+    /*
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -41,4 +42,5 @@ void OnFailure(PlayFabError Result){
             points();
         }
     }
+    */
 }

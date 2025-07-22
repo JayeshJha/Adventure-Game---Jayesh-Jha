@@ -15,7 +15,7 @@ public class Health : MonoBehaviour
     }
      void OnCollisionEnter (Collision Craft){
         if (Craft.gameObject.tag=="Enemy"){
-      //     SceneManager.LoadScene("Lose");
+           SceneManager.LoadScene("Lose");
         }
 
      }
