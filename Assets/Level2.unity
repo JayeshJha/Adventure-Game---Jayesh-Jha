@@ -558,7 +558,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8356118028608469239, guid: 6db9b0ae862c64af4a0b120ec70f9628, type: 3}
       propertyPath: m_Speed
-      value: 12
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 8356118028608469239, guid: 6db9b0ae862c64af4a0b120ec70f9628, type: 3}
       propertyPath: m_StoppingDistance
@@ -828,7 +828,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8356118028608469239, guid: 6db9b0ae862c64af4a0b120ec70f9628, type: 3}
       propertyPath: m_Speed
-      value: 12
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 8356118028608469239, guid: 6db9b0ae862c64af4a0b120ec70f9628, type: 3}
       propertyPath: m_StoppingDistance
@@ -1303,7 +1303,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8356118028608469239, guid: 6db9b0ae862c64af4a0b120ec70f9628, type: 3}
       propertyPath: m_Speed
-      value: 12
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 8356118028608469239, guid: 6db9b0ae862c64af4a0b120ec70f9628, type: 3}
       propertyPath: m_StoppingDistance
@@ -2016,7 +2016,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8356118028608469239, guid: 6db9b0ae862c64af4a0b120ec70f9628, type: 3}
       propertyPath: m_Speed
-      value: 12
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 8356118028608469239, guid: 6db9b0ae862c64af4a0b120ec70f9628, type: 3}
       propertyPath: m_StoppingDistance
@@ -2285,10 +2285,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 954166302}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 100.25, y: -679.5}
-  m_SizeDelta: {x: 200, y: 50}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: -491.75, y: -380.5}
+  m_SizeDelta: {x: -984, y: -548}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1387593867
 MonoBehaviour:
@@ -2887,7 +2887,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1755231264014167798, guid: c87e6905e3dd24003bc85cc642339a8f, type: 3}
       propertyPath: runSpeed
-      value: 100
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 1755231264014167798, guid: c87e6905e3dd24003bc85cc642339a8f, type: 3}
       propertyPath: jumpSpeed
